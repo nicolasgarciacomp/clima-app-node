@@ -10,13 +10,13 @@ const argv = require('yargs').options({
 	}).argv;
 
 const getInfo = async (direccion) => {
-
 	try {
 		const coords = await lugar.getLugarLatLng(direccion);
 		const temp = await clima.getClima(coords.lat, coords.lng);
 
 		return `El clima de ${coords.direccion} es de ${temp}.`;
 	} catch(e) {
+		
 		return `No se pudo determinar el cluma de ${direccion}`;
 	}
 }

@@ -1,7 +1,6 @@
 const axios = require('axios');
 
 const getLugarLatLng = async (dir) => {
-
 	const encodeUrl = encodeURI(dir);
 
 	const instance = axios.create({
@@ -10,7 +9,7 @@ const getLugarLatLng = async (dir) => {
 	});
 
 	const resp = await instance.get();
-
+	
 	if(resp.data.Results.length === 0) {
 		throw new Error(`No hay resultados para ${dir}`);
 	}
