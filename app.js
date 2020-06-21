@@ -16,8 +16,8 @@ const getInfo = async (direccion) => {
 
 		return `El clima de ${coords.direccion} es de ${temp}.`;
 	} catch(e) {
-		
-		return `No se pudo determinar el cluma de ${direccion}`;
+
+		return `No se pudo determinar el clima de ${direccion}`;
 	}
 }
 
